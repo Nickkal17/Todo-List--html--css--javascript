@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #ffde7d;
+    --secondary-color: #f6416c;
+    --complete-btn-color: green;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +13,7 @@
 
 body {
     color: white;
-    background-image: linear-gradient(90deg, #ffde7d, #f6416c);
+    background-image: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
 h1, form {
@@ -25,13 +31,13 @@ form input, form button {
 }
 
 form button {
-    color: #ffde7d;
+    color: var(--primary-color);
     cursor: pointer;
     transition: all 0.4s ease;
 }
 
 form button:hover {
-    color: #f6416c;
+    color: var(--secondary-color);
     cursor: pointer;
 }
 
@@ -70,11 +76,11 @@ form button:hover {
 }
 
 .complete-btn {
-    background-color: green;
+    background-color: var(--complete-btn-color);
 }
 
 .trash-btn {
-    background-color: #ef2d2d;
+    background-color: var(--secondary-color);
 }
 
 .todo-item {
@@ -93,4 +99,38 @@ form button:hover {
 .removed {
     transform: translateX(10rem);
     opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: var(--secondary-color);
+    width: 12rem;
+    cursor: pointer;
+    padding: 1.3rem;
+}
+
+.filter::after {
+    content: "\25BC";
+    position: absolute;
+    background: var(--primary-color);
+    top: 0;
+    right: 0;
+    padding: 1.3rem;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.filter:hover::after {
+    color: var(--primary-color);
+    background-color: white;
+}
+
+.filter {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
 }
