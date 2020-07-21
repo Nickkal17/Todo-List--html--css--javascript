@@ -20,6 +20,7 @@ body {
 h1, form {
     min-height: 20vh;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
@@ -31,7 +32,6 @@ form input, form button {
     background: white;
     box-shadow: var(--box-shadow);
 }
-
 form button {
     color: var(--primary-color);
     cursor: pointer;
@@ -136,4 +136,10 @@ select{
     position: relative;
     overflow: hidden;
     box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 800px) {
+    .todo-input {
+        max-width: 20rem;
+    }
 }
