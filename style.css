@@ -2,6 +2,7 @@
     --primary-color: #ffde7d;
     --secondary-color: #f6416c;
     --complete-btn-color: green;
+    --box-shadow: 5px 5px #63636349;
 }
 
 * {
@@ -28,6 +29,7 @@ form input, form button {
     font-size: 2rem;
     border: none;
     background: white;
+    box-shadow: var(--box-shadow);
 }
 
 form button {
@@ -59,7 +61,7 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 5px 5px #63636349;
+    box-shadow: var(--box-shadow);
     border-radius: 4px;
     transition: all 0.4s ease;
 }
@@ -133,4 +135,5 @@ select{
     margin: 1rem;
     position: relative;
     overflow: hidden;
+    box-shadow: var(--box-shadow);
 }
